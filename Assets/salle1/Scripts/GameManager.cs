@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour{
         if (m_Roof && !m_Roof.activeSelf)
             m_Roof.SetActive(true);
 
-        if (!m_GameOverCanvas)
+        if (!m_GameOverCanvas && UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "Menu")
             throw new System.Exception("No Game Over Canvas set");
     }
 
@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour{
 
     public void mainMenu(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+    }
+
+    public void loadSalle1(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Salle1");
     }
 
     private void OnDestroy(){
