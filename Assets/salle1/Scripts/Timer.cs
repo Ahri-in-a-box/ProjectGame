@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Timer : MonoBehaviour{
-
     private System.Diagnostics.Stopwatch m_Stopwatch = null;
     private bool m_Started = false;
     private bool m_GameIsOver = false;
 
+    public delegate void GameOverEvent();
+    public static event GameOverEvent OnGameOver;
+
     // Start is called before the first frame update
     void Start(){
         m_Stopwatch = new System.Diagnostics.Stopwatch();
+        ExitDoorManager.OnGameWin += () => { m_GameIsOver = true; m_Stopwatch.Stop(); };
     }
 
     // Update is called once per frame
@@ -33,9 +36,9 @@ public class Timer : MonoBehaviour{
         this.GetComponent<UnityEngine.UI.Text>().text = $"{mins}:{secs}";
 
         if(mins <= 0 && secs <= 0){
-            //Emite game over event
             m_Stopwatch.Stop();
             m_GameIsOver = true;
+            OnGameOver?.Invoke();
         }
     }
 }
