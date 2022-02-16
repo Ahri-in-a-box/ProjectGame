@@ -8,15 +8,21 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Change Scene with button/MainScene.unity
     guid: 2f34041abaab6f14d9994f28ff6ac874
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Change Scene with button/Scene1.unity
     guid: b770e0d550ca9074e81f34f0d731a7d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Change Scene with button/Scene2.unity
     guid: dfd54d4f1e1043544a85df4063695573
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 59a540e0a21ed2f42b56ccf985d37449
+  - enabled: 1
+    path: Assets/Scenes/salle1.unity
+    guid: 6b82c1b7fec57204d978bef35b737d5a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f56658e55ec772f49a34cbfecbbc42b0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3f15ec2371cd190469193a474b0c9a1b, type: 2}
